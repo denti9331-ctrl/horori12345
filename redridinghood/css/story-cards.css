@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+KR:wght@400&display=swap');
+@font-face{font-family:'Story MaruBuri';src:url('https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Story MaruBuri';src:url('https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+/* Only the story gallery and its top-layer reader are styled here. */
+.story-gallery{padding:clamp(60px,6vw,110px) max(7%,20px) 65px;background:#211a13 url('../images/story/story-section-bg.webp') center / cover no-repeat;color:#F0E3D0}
+.story-gallery__heading{max-width:1440px;margin:0 auto 34px}
+.story-gallery__heading>p:first-child{font:500 13px/1.8 'Cormorant Garamond',Georgia,serif;letter-spacing:.16em;color:#C4A786}
+.story-gallery h2{font:700 clamp(30px,3vw,48px)/1.4 'Story MaruBuri','Hahmlet','Batang',serif;letter-spacing:-.02em;color:#F0E3D0;margin:17px 0 22px}
+.story-gallery__heading>p:last-child{font:400 clamp(12px,1vw,15px)/1.85 'Noto Serif KR','Batang',serif;color:#D2C0A8;word-break:keep-all}
+.story-cards{display:flex;gap:5px;width:100%;max-width:1440px;margin:auto;height:clamp(460px,43vw,640px)}
+.story-card{position:relative;flex:1 1 0;min-width:0;padding:0;border:1px solid #685748;border-radius:0;background:#272720;color:#eee3cf;cursor:pointer;text-align:left;overflow:hidden}
+.story-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:brightness(1);transition:filter .25s,transform .25s}
+.story-card__shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,15,10,.92),rgba(20,15,10,.45) 15%,transparent 43%);pointer-events:none}
+.story-card__title{position:absolute;bottom:28px;left:16px;right:16px;text-align:center;word-break:keep-all;text-shadow:0 1px 4px #0008;pointer-events:none}.story-card__chapter-label{display:block;font:500 13px/1.6 'Cormorant Garamond',Georgia,serif;letter-spacing:.18em;color:#C4A786;margin-bottom:7px}.story-card__name{display:block;font:600 clamp(16px,1.35vw,23px)/1.6 'Story MaruBuri','Hahmlet','Batang',serif;color:#F0E3D0}
+.story-card__copy,.story-mobile-detail{display:none!important}
+.story-card:focus-visible{outline:2px solid #cbb28b;outline-offset:-3px}
+@media(hover:hover){.story-card:hover{border-color:#B89A74}.story-card:hover>img{filter:brightness(1.03);transform:scale(1.02)}}
+/* Native dialog lives in the top layer, outside all ancestor clipping. */
+.story-reader{position:fixed;inset:auto;margin:0;padding:0;border:1px solid #8c7b585e;border-radius:1px;max-width:none;max-height:none;overflow:hidden;background:#201b16;color:#EEE0C9;box-shadow:0 24px 85px #0008}
+/* Keyframes provide a transparent first frame even when showModal creates the backdrop.
+   Keep the dialog open throughout the reverse fade and the return animation. */
+.story-reader::backdrop{background:rgba(0,0,0,.65);opacity:0;animation:story-backdrop-in .7s ease-in-out forwards}
+.story-reader.is-closing::backdrop{animation:story-backdrop-out .7s ease-in-out forwards}
+@keyframes story-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes story-backdrop-out{from{opacity:1}to{opacity:0}}
+.story-reader__image{position:absolute;inset:0 auto 0 0;width:48%;height:100%;object-fit:cover;object-position:center;background:#272720}
+.story-reader__body{position:absolute;inset:0 0 0 48%;display:flex;flex-direction:column;justify-content:center;padding:65px clamp(24px,4vw,70px);overflow:auto;opacity:0;transform:translateY(14px);transition:opacity .3s,transform .3s}
+.story-reader.is-readable .story-reader__body{opacity:1;transform:none}
+.story-reader h3{font:700 clamp(23px,2.5vw,40px)/1.6 'Story MaruBuri','Hahmlet','Batang',serif;margin:0 0 25px;word-break:keep-all}
+.story-reader p{font:400 clamp(14px,1.2vw,18px)/1.85 'Noto Serif KR','Batang',serif;word-break:keep-all;margin:0;color:#D2C0A8}
+.story-reader button{border:0;background:transparent;color:inherit;cursor:pointer;min-height:44px;padding:10px;font:600 13px 'Story MaruBuri','Batang',serif}
+.story-reader button:focus-visible{outline:1px solid #cbb28b}
+.story-reader button:disabled{opacity:.3;cursor:default}
+.story-reader__close{position:absolute;right:12px;top:10px;z-index:2;background:#191b16dd!important}
+.story-reader nav{display:flex;justify-content:space-between;gap:16px;margin-top:35px}
+@media(max-width:850px),(hover:none),(pointer:coarse){
+ .story-cards{overflow-x:auto;overscroll-behavior-x:contain;height:500px;scroll-snap-type:x proximity;padding-bottom:14px}
+ .story-card{flex:0 0 min(72vw,310px);scroll-snap-align:center}
+}
+@media(max-width:650px){
+ .story-reader__image{width:100%;height:42%;object-position:center 45%}
+ .story-reader__body{inset:42% 0 0;padding:22px 24px}
+ .story-reader h3{font-size:21px;margin-bottom:12px}
+ .story-reader p{font-size:13px;line-height:1.8}
+ .story-reader nav{margin-top:18px}
+}
+@media(prefers-reduced-motion:reduce){.story-card>img,.story-reader__body{transition:none}}
+
+
+
+
+/* A quiet colophon beneath the five engraved plates. */
+.story-gallery__ornament{display:flex;align-items:center;justify-content:center;gap:22px;max-width:1000px;margin:42px auto 0;color:#C4A786;font:500 12px/1.7 'Cormorant Garamond',Georgia,serif;letter-spacing:.14em;text-align:center}
+.story-gallery__ornament::before,.story-gallery__ornament::after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,#9d805b99)}
+.story-gallery__ornament::after{transform:rotate(180deg)}
+@media(max-width:850px){.story-gallery{background-size:auto 100%;padding-inline:20px}.story-gallery__ornament{gap:12px;font-size:10px;letter-spacing:.1em}.story-gallery__ornament span{max-width:230px}.story-card__name{font-size:19px}}
+
+
+.story-reader__chapter{display:block;flex-shrink:0;margin-bottom:14px;font:500 13px/1.6 'Cormorant Garamond',Georgia,serif;letter-spacing:.18em;color:#C4A786}
+.story-reader__body{text-align:left}
+@media(prefers-reduced-motion:reduce){.story-reader::backdrop,.story-reader.is-closing::backdrop{animation-duration:0s}}
+
+/* Blend only the existing bottom padding; do not cover cards or the next artwork. */
+.story-gallery{position:relative}
+.story-gallery::after{content:'';position:absolute;left:0;right:0;bottom:0;height:65px;pointer-events:none;background:linear-gradient(to bottom,rgba(53,35,23,0) 0%,rgba(82,53,32,.35) 35%,rgba(137,99,61,.65) 70%,rgba(194,157,110,.85) 100%)}

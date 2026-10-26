@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빨간모자</title>
+  <link rel="stylesheet" href="css/fog-arrival.css">
+  <script src="js/fog-arrival.js"></script>
+  <meta name="description" content="우리가 알던 이야기 너머, 빨간모자의 진실. 빛을 움직여 숲에 숨은 이야기를 탐색하세요.">
+  <link rel="preload" href="fonts/Hahmlet-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/forest-transition.css">
+  <script src="js/forest-transition.js" defer></script>
+  <link rel="stylesheet" href="css/story-cards.css">
+  <script defer src="js/story-cards.js"></script>
+  <link rel="stylesheet" href="css/truth-section.css">
+  <script defer src="js/truth-section.js"></script>
+  <link rel="stylesheet" href="css/chapter04.css">
+  <script defer src="js/chapter04.js"></script>
+  <link rel="stylesheet" href="css/story-nav.css">
+  <script src="js/story-nav.js" defer></script>
+  <link rel="stylesheet" href="css/chapter05-integrated.css">
+  <script defer src="js/chapter05-integrated.js"></script>
+</head>
+<body class="has-story-nav">
+  <nav class="story-topnav" aria-label="이야기 탐색">
+    <a href="../index.html?return=book#book-scene">← 동화책으로</a>
+    <span class="story-topnav__title">RED RIDING HOOD</span>
+    <button type="button" aria-expanded="false" aria-controls="story-chapters">챕터</button>
+    <ul id="story-chapters" hidden>
+      <li><a href="#intro-title">인트로</a></li>
+      <li><a href="#story-title">우리가 기억하는 동화</a></li>
+      <li><a href="#story-gallery-title">다섯 개의 장면</a></li>
+      <li><a href="#truth-origin-title">빨간모자의 탄생</a></li>
+      <li><a href="#truth-book-title">1697 · 프랑스</a></li>
+      <li><a href="#truth-title">원작은 달랐다</a></li>
+      <li><a href="#chapter04">숲에 남겨진 상징들</a></li>
+      <li><a href="#chapter05">오늘의 빨간모자</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro__scene" aria-hidden="true">
+        <img class="intro__image intro__background" src="images/intro/intro-main.webp" alt="" fetchpriority="high" decoding="async">
+        <img class="intro__image intro__shadow" src="images/intro/intro-trees.webp" alt="" decoding="async">
+        <!-- The supplied tree texture differs from the background. Use only its
+             silhouette, with no independent parallax, to avoid doubled details. -->
+        <img class="intro__image intro__trees" src="images/intro/intro-trees.webp" alt="" decoding="async">
+      </div>
+      <div class="intro__lighting" aria-hidden="true"></div>
+      <div class="intro__vignette" aria-hidden="true"></div>
+      <!-- Position and entrance transforms live on separate wrappers. -->
+      <div class="intro__ui">
+        <div class="intro__type-enter">
+          <p class="intro__eyebrow" aria-label="RED RIDING HOOD"><span aria-hidden="true" class="type-english"><span class="type-word"><span class="type-en" style="--i:0;--r:-4deg;--y:-2px;--s:1">R</span><span class="type-en" style="--i:1;--r:2deg;--y:1px;--s:0.86">E</span><span class="type-en" style="--i:2;--r:-1deg;--y:0px;--s:1.06">D</span></span> <span class="type-word"><span class="type-en" style="--i:0;--r:-4deg;--y:-2px;--s:1">R</span><span class="type-en" style="--i:1;--r:2deg;--y:1px;--s:0.86">I</span><span class="type-en" style="--i:2;--r:-1deg;--y:0px;--s:1.06">D</span><span class="type-en" style="--i:3;--r:3deg;--y:2px;--s:0.93">I</span><span class="type-en" style="--i:4;--r:-2deg;--y:-1px;--s:1.02">N</span><span class="type-en" style="--i:5;--r:1deg;--y:-2px;--s:1">G</span></span> <span class="type-word"><span class="type-en" style="--i:0;--r:-4deg;--y:-2px;--s:1">H</span><span class="type-en" style="--i:1;--r:2deg;--y:1px;--s:0.86">O</span><span class="type-en" style="--i:2;--r:-1deg;--y:0px;--s:1.06">O</span><span class="type-en" style="--i:3;--r:3deg;--y:2px;--s:0.93">D</span></span></span></p>
+          <h1 id="intro-title" aria-label="빨간모자의 진실"><span aria-hidden="true" class="type-korean"><span class="type-word"><span class="type-ko" style="--i:0;--r:-1deg;--y:-2px;--s:1">빨</span><span class="type-ko" style="--i:1;--r:0.6deg;--y:1px;--s:0.98">간</span><span class="type-ko" style="--i:2;--r:-0.4deg;--y:0px;--s:1.02">모</span><span class="type-ko" style="--i:3;--r:0.8deg;--y:2px;--s:1">자</span><span class="type-ko" style="--i:4;--r:-1deg;--y:-1px;--s:1">의</span></span> <span class="intro__title-accent type-word"><span class="type-ko" style="--i:0;--r:-1deg;--y:-2px;--s:1">진</span><span class="type-ko" style="--i:1;--r:0.6deg;--y:1px;--s:0.98">실</span></span></span></h1>
+          <p class="intro__description">그 숲에는 우리가 몰랐던 이야기가 숨어 있습니다.</p>
+        </div>
+      </div>
+      <p class="intro__hint"><span aria-hidden="true"></span><span class="intro__hint-desktop">빛을 움직여 숲을 들여다보세요</span><span class="intro__hint-touch">빛이 머무는 숲을 들여다보세요</span></p>
+      <div class="intro__pointer" aria-hidden="true"></div>
+      <p class="intro__error" role="status" hidden>숲 이미지를 불러오지 못했습니다. 잠시 후 다시 방문해 주세요.</p>
+    </section>
+    <!-- Native-scroll passage with verified transparent foreground trees. -->
+    <section class="forest-transition" aria-labelledby="story-title">
+      <div class="forest-transition__stage">
+        <img class="forest-transition__background" src="images/transition/story-background.webp" alt="밝은 종이 위에 새겨진 숲과 먼 마을" width="1672" height="940" decoding="async">
+        <img class="forest-transition__tree forest-transition__tree--left" src="images/transition/transition-tree-left.webp" alt="" aria-hidden="true" width="1672" height="941" decoding="async">
+        <img class="forest-transition__tree forest-transition__tree--right" src="images/transition/transition-tree-right.webp" alt="" aria-hidden="true" width="1672" height="941" decoding="async">
+        <div class="forest-transition__mist" aria-hidden="true"></div>
+        <div class="forest-transition__dark" aria-hidden="true"></div>
+        <article class="forest-transition__copy">
+          <p class="forest-transition__label">CHAPTER 01 / THE STORY</p>
+          <h2 id="story-title">우리가 기억하는 동화</h2>
+          <p>빨간모자는 할머니를 만나기 위해 숲으로 향합니다.</p>
+          <p>그곳에서 만난 늑대는 그녀보다 먼저 할머니의 집에 도착합니다.</p>
+          <p>하지만 우리가 알고 있는 결말은 처음부터 존재했던 것이 아닙니다.</p>
+          <blockquote>“그 이야기에는 원래 사냥꾼이 없었습니다.”</blockquote>
+          <p class="forest-transition__note">1697년 샤를 페로의 문학판을 가리킵니다.<br>모든 초기 구전 설화가 같은 결말이었다는 뜻은 아닙니다.</p>
+        </article>
+      </div>
+    </section>
+    <section class="story-gallery" aria-labelledby="story-gallery-title">
+      <header class="story-gallery__heading"><p>FIVE CHAPTERS / THE FAMILIAR TALE</p><h2 id="story-gallery-title">다섯 개의 장면</h2><p>다섯 장의 삽화로 다시 읽는 빨간모자. 장면을 선택하면 이야기가 펼쳐집니다.</p></header>
+      <!-- Click accordion; mobile reading area shares the selected story. -->
+      <div class="story-cards">
+        <button class="story-card" type="button" data-story="0" aria-expanded="false" aria-controls="story-copy-01 story-mobile-detail" aria-label="01 숲으로">
+          <img src="images/story/story-01-forest.webp" alt="" loading="lazy" decoding="async" width="874" height="1800">
+          <span class="story-card__shade" aria-hidden="true"></span>
+          <span class="story-card__title"><span class="story-card__chapter-label">CHAPTER I</span><span class="story-card__name">숲으로</span></span>
+          <span class="story-card__copy" id="story-copy-01" aria-hidden="true"><span class="story-card__chapter">CHAPTER 01 — 숲으로</span><span class="story-card__text">빨간모자는 할머니에게 음식을 전하기 위해 숲으로 향합니다. 어머니의 당부를 기억하며 낯선 숲길을 걷기 시작합니다.</span></span>
+        </button>
+        <button class="story-card" type="button" data-story="1" aria-expanded="false" aria-controls="story-copy-02 story-mobile-detail" aria-label="02 늑대와의 만남">
+          <img src="images/story/story-02-wolf.webp" alt="" loading="lazy" decoding="async" width="874" height="1800">
+          <span class="story-card__shade" aria-hidden="true"></span>
+          <span class="story-card__title"><span class="story-card__chapter-label">CHAPTER II</span><span class="story-card__name">늑대와의 만남</span></span>
+          <span class="story-card__copy" id="story-copy-02" aria-hidden="true"><span class="story-card__chapter">CHAPTER 02 — 늑대와의 만남</span><span class="story-card__text">숲에서 늑대를 만난 빨간모자는 할머니의 집이 어디에 있는지 알려줍니다. 늑대는 그녀보다 먼저 도착할 계획을 세웁니다.</span></span>
+        </button>
+        <button class="story-card" type="button" data-story="2" aria-expanded="false" aria-controls="story-copy-03 story-mobile-detail" aria-label="03 꽃밭">
+          <img src="images/story/story-03-flowers.webp" alt="" loading="lazy" decoding="async" width="874" height="1800">
+          <span class="story-card__shade" aria-hidden="true"></span>
+          <span class="story-card__title"><span class="story-card__chapter-label">CHAPTER III</span><span class="story-card__name">꽃밭</span></span>
+          <span class="story-card__copy" id="story-copy-03" aria-hidden="true"><span class="story-card__chapter">CHAPTER 03 — 꽃밭</span><span class="story-card__text">빨간모자는 아름다운 꽃에 이끌려 길을 벗어납니다. 그동안 늑대는 지름길로 할머니의 집을 향합니다.</span></span>
+        </button>
+        <button class="story-card" type="button" data-story="3" aria-expanded="false" aria-controls="story-copy-04 story-mobile-detail" aria-label="04 할머니의 집">
+          <img src="images/story/story-04-grandma.webp" alt="" loading="lazy" decoding="async" width="874" height="1800">
+          <span class="story-card__shade" aria-hidden="true"></span>
+          <span class="story-card__title"><span class="story-card__chapter-label">CHAPTER IV</span><span class="story-card__name">할머니의 집</span></span>
+          <span class="story-card__copy" id="story-copy-04" aria-hidden="true"><span class="story-card__chapter">CHAPTER 04 — 할머니의 집</span><span class="story-card__text">늑대는 할머니를 삼키고 할머니의 옷을 입은 채 빨간모자를 기다립니다. 아무것도 모르는 빨간모자가 집에 도착합니다.</span></span>
+        </button>
+        <button class="story-card" type="button" data-story="4" aria-expanded="false" aria-controls="story-copy-05 story-mobile-detail" aria-label="05 구출">
+          <img src="images/story/story-05-rescue.webp" alt="" loading="lazy" decoding="async" width="874" height="1800">
+          <span class="story-card__shade" aria-hidden="true"></span>
+          <span class="story-card__title"><span class="story-card__chapter-label">CHAPTER V</span><span class="story-card__name">구출</span></span>
+          <span class="story-card__copy" id="story-copy-05" aria-hidden="true"><span class="story-card__chapter">CHAPTER 05 — 구출</span><span class="story-card__text">늑대에게 삼켜진 빨간모자와 할머니는 사냥꾼에게 구출됩니다. 두 사람은 무사히 살아나고 이야기는 끝을 맺습니다.</span></span>
+        </button>
+      </div>
+      <div class="story-gallery__ornament" aria-hidden="true"><span>✦ THE END OF THE FAMILIAR TALE ✦</span></div>
+      <section class="story-mobile-detail" id="story-mobile-detail" aria-live="polite" aria-atomic="true" hidden>
+        <h3></h3><p></p>
+      </section>
+    </section>
+    <!-- One static illustrated page: origin, publication, and two endings. -->
+    <section class="truth-section" aria-labelledby="truth-origin-title">
+      <div class="truth-page truth-canvas">
+        <section class="truth-row truth-origin" aria-labelledby="truth-origin-title">
+          <div class="truth-copy">
+            <p class="truth-eyebrow">THE ORIGIN OF<br>LITTLE RED RIDING HOOD</p>
+            <h2 id="truth-origin-title">빨간모자의 탄생</h2>
+            <div class="truth-rule" aria-hidden="true"></div>
+            <p class="truth-subtitle">우리가 아는 이야기는 어디에서 시작되었을까?</p>
+            <p class="truth-opening-paragraph">빨간모자는 처음부터 한 권의 책으로 태어난 이야기가 아니었다.</p>
+            <p>유럽 곳곳에서 구전되던 소녀와 늑대의 이야기가 시간을 거쳐 기록되고, 각 시대의 사회와 문화 속에서 다른 모습으로 변화해 왔다.</p>
+          </div>
+          <figure class="truth-art truth-origin-art"><video class="truth-origin-video" src="images/redridinghood/redhood.webm" aria-label="빨간모자 애니메이션" width="1536" height="1024" autoplay muted loop playsinline preload="metadata"></video></figure>
+        </section>
+        <section class="truth-row truth-publication" aria-labelledby="truth-book-title">
+          <figure class="truth-art"><video class="truth-book-video" src="images/redridinghood/book.webm" aria-label="촛불과 깃펜 옆의 페로 동화집 애니메이션" width="1536" height="1024" autoplay muted loop playsinline preload="metadata"></video></figure>
+          <div class="truth-copy">
+            <p class="truth-eyebrow">INTO THE BOOKS</p>
+            <h2 id="truth-book-title"><span class="truth-history-year">1697</span><span class="truth-history-place"> · 프랑스</span></h2>
+            <div class="truth-rule" aria-hidden="true"></div>
+            <p><strong>샤를 페로</strong>는 <strong>1697년</strong>, 구전되던 빨간모자 이야기를 자신의 동화집에 수록했다.</p>
+            <p>이야기는 책을 통해 더 널리 알려졌고, 낯선 이를 경계하라는 교훈을 담은 문학 작품으로 자리 잡기 시작했다.</p>
+          </div>
+        </section>
+        <section class="truth-row truth-comparison" aria-labelledby="truth-title">
+          <div class="truth-ending-copy">
+          <header class="truth-comparison-heading truth-copy">
+            <p class="truth-eyebrow">TWO VERSIONS,<br>TWO ENDINGS</p>
+            <h2 id="truth-title">원작은 달랐다</h2>
+            <div class="truth-rule" aria-hidden="true"></div>
+            <p class="truth-subtitle">같은 빨간모자, 그러나 서로 다른 결말.</p>
+            <div class="truth-years" role="group" aria-label="비교할 판본 연도">
+              <button type="button" data-year="1697" aria-pressed="true" aria-controls="truth-ending truth-ending-art">1697</button>
+              <span aria-hidden="true">|</span>
+              <button type="button" data-year="1812" aria-pressed="false" aria-controls="truth-ending truth-ending-art">1812</button>
+            </div>
+          </header>
+          <div class="truth-ending truth-copy" id="truth-ending" aria-live="polite" aria-atomic="true">
+            <h3>구출되지 못한 소녀</h3>
+            <div class="truth-description"><p>페로의 이야기에서는 사냥꾼이 등장하지 않는다.</p><p>늑대가 빨간모자를 잡아먹고 이야기는 끝난다.</p><p>이야기는 소녀에게 경고를 남기는 교훈으로 전해졌다.</p></div>
+          </div>
+          </div>
+          <figure class="truth-art truth-ending-art" id="truth-ending-art">
+            <video data-ending-image="1697" src="images/redridinghood/wolf.webm" aria-label="늑대와 빨간모자의 페로 판본 결말 애니메이션" width="1536" height="1024" autoplay muted loop playsinline preload="auto"></video>
+            <video data-ending-image="1812" src="images/redridinghood/hunter.webm" aria-label="사냥꾼의 구출 장면 애니메이션" width="1536" height="1024" autoplay muted loop playsinline preload="auto" hidden></video>
+          </figure>
+        </section>
+      </div>
+    </section>
+    <section class="symbols-section" id="chapter04" aria-labelledby="symbols-title">
+      <header class="symbols-heading">
+        <p>CHAPTER 04 / THE SYMBOLS</p>
+        <h2 id="symbols-title">숲에 남겨진 상징들</h2>
+        <p id="symbols-hint">망토, 늑대, 표지판을 선택해 그 안에 담긴 이야기를 읽어보세요.</p>
+      </header>
+      <div class="symbols-frame">
+        <div class="symbols-scene" aria-describedby="symbols-hint">
+          <img src="images/redridinghood/chapter04-bg.webp" alt="나무 사이에 걸린 붉은 망토, 숲길의 늑대와 갈림길 표지판" width="1672" height="941" loading="lazy">
+          <img class="symbols-object" data-layer="cloak" src="images/redridinghood/cloak.webp" alt="" width="1672" height="941" loading="lazy" aria-hidden="true">
+          <img class="symbols-object" data-layer="wolf" src="images/redridinghood/wolf.webp" alt="" width="1672" height="941" loading="lazy" aria-hidden="true">
+          <img class="symbols-object" data-layer="sign" src="images/redridinghood/sign.webp" alt="" width="1672" height="941" loading="lazy" aria-hidden="true">
+        </div>
+        <nav class="symbols-controls" aria-label="상징 선택">
+          <button type="button" data-symbol="cloak" aria-expanded="false" aria-controls="symbol-panel">붉은 망토</button>
+          <button type="button" data-symbol="wolf" aria-expanded="false" aria-controls="symbol-panel">늑대</button>
+          <button type="button" data-symbol="sign" aria-expanded="false" aria-controls="symbol-panel">갈림길 표지판</button>
+        </nav>
+        <section class="symbols-panel" id="symbol-panel" role="dialog" aria-modal="true" aria-labelledby="symbol-panel-title" hidden>
+          <button class="symbols-panel__close" type="button" aria-label="상징 설명 닫기">×</button>
+          <span class="symbols-panel__label">READING THE SYMBOLS</span>
+          <h3 id="symbol-panel-title"></h3>
+          <div class="symbols-panel__body"></div>
+        </section>
+      </div>
+      <template id="symbol-cloak" data-title="붉은 망토 · 이름이 된 색">
+        <p>페로의 1697년 판본에서 소녀는 할머니가 만들어 준 빨간 두건 때문에 ‘빨간모자’라고 불립니다. 이 장면의 망토는 그 두건을 시각적으로 확장한 표현입니다.</p>
+        <p>이 전시에서는 숲의 어두운 색과 대비되는 붉은색을 소녀의 존재와 정체성을 드러내는 표식으로 읽습니다. 색에 부여하는 의미는 여러 해석 중 하나이며, 작품이 직접 밝힌 유일한 정답은 아닙니다.</p>
+        <p><a href="https://sites.pitt.edu/~dash/perrault02.html" target="_blank" rel="noopener noreferrer">페로 판본 읽기 (영문, 새 창)</a></p>
+      </template>
+      <template id="symbol-wolf" data-title="늑대 · 다정한 목소리의 위험">
+        <p>페로는 이야기 끝의 교훈에서 ‘늑대’를 인간의 위험한 접근에 빗댑니다. 특히 부드럽게 말하고 친근하게 다가오는 존재도 경계해야 한다는 뜻을 드러냅니다.</p>
+        <p>따라서 늑대는 숲속의 포식자인 동시에 신뢰를 이용하는 상대의 상징으로 읽을 수 있습니다. 위협은 무서운 겉모습만으로 알아볼 수 있는 것이 아니라는 해석입니다.</p>
+        <p><a href="https://sites.pitt.edu/~dash/perrault02.html" target="_blank" rel="noopener noreferrer">페로의 이야기와 교훈 읽기 (영문, 새 창)</a></p>
+      </template>
+      <template id="symbol-sign" data-title="갈림길 · 선택이 이야기가 되는 곳">
+        <p>페로 판본에서 늑대는 짧은 길로 달리고, 소녀는 꽃을 모으며 먼 길을 돌아갑니다. 두 인물이 서로 다른 길을 택하는 장면은 할머니의 집에 도착하는 순서를 바꿉니다.</p>
+        <p>이 장면의 표지판은 그 갈림길을 눈에 보이게 만든 전시 장치입니다. 여기에서는 길을 정보와 선택의 상징으로 해석합니다. 표지판 자체가 페로 원문에 등장하는 물건이라는 뜻은 아닙니다.</p>
+        <p><a href="https://sites.pitt.edu/~dash/perrault02.html" target="_blank" rel="noopener noreferrer">판본 속 두 갈래 길 읽기 (영문, 새 창)</a></p>
+      </template>
+    </section>
+<section class="chapter05" id="chapter05" aria-labelledby="epilogue-title">
+    <section class="epilogue" aria-labelledby="epilogue-title">
+      <div class="scene" aria-hidden="true">
+        <div class="forest"></div><div class="daylight"></div>
+        <div class="scene-vignette"></div>
+        <span class="scene-caption">THE FOREST HAS NO END</span>
+      </div>
+      <div class="narrative">
+        <section class="passage opening" data-stage="0">
+          <p class="eyebrow">CHAPTER 05 <span>—</span> THE TALE CONTINUES</p>
+          <h2 class="chapter05-title" id="epilogue-title">오늘의<br><em>빨간모자</em></h2>
+          <p class="intro-copy">책의 마지막 장을 덮어도<br>이야기 속 숲은 우리 곁에 남아 있습니다</p>
+          <p class="scroll-hint"><span></span> 천천히 숲의 바깥으로</p>
+        </section>
+        <section class="passage" data-stage="1" aria-labelledby="forest-line">
+          <span class="line-number">I THE FOREST</span>
+          <h2 id="forest-line">숲은<br>사라지지 않았다</h2>
+          <p>익숙한 길을 벗어나는 순간<br>처음 만나는 세상 앞에서<br>우리는 다시 빨간모자가 됩니다</p>
+        </section>
+        <section class="passage" data-stage="2" aria-labelledby="wolf-line">
+          <span class="line-number">II THE WOLF</span>
+          <h2 id="wolf-line">늑대는<br>다른 얼굴을 하고</h2>
+          <p>때로는 다정한 말로<br>때로는 손쉬운 약속으로<br>우리는 누구의 목소리를 믿고 있을까요?</p>
+        </section>
+        <section class="passage" data-stage="3" aria-labelledby="path-line">
+          <span class="line-number">III THE PATH</span>
+          <h2 id="path-line">갈림길은 여전히<br>우리 앞에 있다</h2>
+          <p>누군가가 정해 준 길과<br>스스로 걸어 보고 싶은 길 사이에서<br>다음 장을 쓰는 사람은 우리 자신입니다</p>
+        </section>
+      </div>
+    </section>
+    <section class="last-page" aria-labelledby="last-question">
+      <p class="eyebrow">THE END OF THE TALE THE BEGINNING OF YOURS</p>
+      <span class="ornament" aria-hidden="true">✦</span>
+      <h2 id="last-question">당신이라면<br>어떤 길을 <em>선택하겠습니까?</em></h2>
+      <p>답은 이 책에 적혀 있지 않습니다</p>
+      <a class="return-link" href="#intro-title">이야기를 처음부터 다시 읽기 <span aria-hidden="true">↗</span></a>
+      <footer><span>RED RIDING HOOD</span><span>이야기는 계속됩니다</span><a href="#chapter05">맨 위로 ↑</a></footer>
+    </section>
+  </section>
+  </main>
+</body>
+</html>
+

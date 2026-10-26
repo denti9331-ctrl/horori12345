@@ -1,0 +1,28 @@
+/* Full-section paper texture behind both the heading and original scene. */
+.symbols-section{--chapter04-surround:#171714;background:linear-gradient(180deg,rgba(23,23,20,.7),rgba(23,23,20,.12) 12%,rgba(23,23,20,.12) 88%,rgba(23,23,20,.85)),url('../images/symbols-bg.webp') center / cover no-repeat;padding:clamp(56px,7vw,112px) clamp(16px,4vw,72px);color:#eee4d0;font-family:'Hahmlet',serif}
+.symbols-heading{max-width:1440px;margin:0 auto 30px}
+.symbols-heading>p:first-child{font:12px/1.5 Georgia,serif;letter-spacing:.2em;color:#ddd4c3}
+.symbols-heading h2{font-size:clamp(28px,3vw,48px);margin:12px 0 16px;letter-spacing:-.04em}
+.symbols-heading>p:last-child{font-size:14px;line-height:1.8;color:#e4dccb}
+.symbols-frame{position:relative;max-width:1440px;margin:auto;border:1px solid #655b49;border-radius:clamp(18px,2.5vw,36px);overflow:hidden;background:#211f19;box-shadow:0 24px 70px #0005}
+.symbols-scene{position:relative;aspect-ratio:1672/941;isolation:isolate}
+.symbols-scene>img{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;user-select:none}
+.symbols-object{filter:drop-shadow(0 2px 4px transparent) drop-shadow(0 0 8px transparent);transform:none;transition:filter 300ms ease}
+.symbols-object[data-layer=cloak]{transform-origin:23.3% 51.5%}
+.symbols-object[data-layer=wolf]{transform-origin:46.3% 67.1%}
+.symbols-object[data-layer=sign]{transform-origin:79.2% 67.2%}
+/* Drop shadows follow the WebP alpha, never the rectangular hit area. */
+.symbols-object.is-highlighted{filter:drop-shadow(0 2px 4px rgba(12,10,8,.66)) drop-shadow(0 0 8px rgba(29,22,17,.48))}
+/* Keep semantic keyboard controls without a visible button row. Focus shades
+   the corresponding object, and Enter/Space opens its explanation. */
+.symbols-controls{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.symbols-panel button:focus-visible{outline:2px solid #bfc3bb;outline-offset:4px}
+.symbols-panel{position:absolute;inset:clamp(12px,3vw,44px);z-index:5;overflow:auto;padding:clamp(22px,4vw,56px);border:1px solid #9d8963;border-radius:18px;background:#201e18f5;box-shadow:0 10px 40px #0008;overscroll-behavior:contain}
+.symbols-panel[hidden]{display:none}
+.symbols-panel h3{font-size:clamp(23px,3vw,40px);margin:16px 48px 24px 0;line-height:1.4}
+.symbols-panel p{max-width:720px;font-size:clamp(14px,1.3vw,18px);line-height:1.9;word-break:keep-all}
+.symbols-panel__label{color:#b6a280;font:12px/1.5 Georgia,serif;letter-spacing:.18em}
+.symbols-panel__close{position:absolute;right:18px;top:18px;min-width:44px;min-height:44px;border:1px solid #8c795b;border-radius:50%;background:#29251e;color:#efe1c5;font-size:24px;cursor:pointer}
+.symbols-panel a{color:#e4c68e;text-underline-offset:4px}
+@media(max-width:600px){.symbols-panel{inset:10px;padding:22px 20px}.symbols-panel h3{font-size:23px;margin-top:32px}.symbols-panel p{font-size:14px}.symbols-frame:has(.symbols-panel:not([hidden])) .symbols-scene{min-height:460px}}
+@media(prefers-reduced-motion:reduce){.symbols-object{transition:none}.symbols-object.is-highlighted{transform:none}}

@@ -1,0 +1,23 @@
+/* Independent of the intro's lighting, title and pointer transforms. */
+.forest-transition{position:relative;isolation:isolate;background:#dfd0b2;color:#24201c;--tree-left:-32%;--tree-right:32%;--background-y:0px;--dark:0;--mist:0;--copy-opacity:1;--copy-y:0px}
+.forest-transition__stage{position:relative;min-height:760px;min-height:max(760px,100svh);overflow:clip;display:grid;place-items:center}
+.forest-transition.is-enhanced{height:175svh;min-height:1330px}
+.forest-transition.is-enhanced .forest-transition__stage{position:sticky;top:0}
+.forest-transition__background,.forest-transition__tree{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
+.forest-transition__background{inset:-14px 0;height:calc(100% + 28px);transform:translate3d(0,var(--background-y),0)}
+.forest-transition__tree{object-fit:contain;z-index:1;will-change:transform}
+.forest-transition__tree--left{transform:translate3d(var(--tree-left),0,0);object-position:left center}
+.forest-transition__tree--right{transform:translate3d(var(--tree-right),0,0);object-position:right center}
+.forest-transition__tree[hidden]{display:none}
+.forest-transition__dark,.forest-transition__mist{position:absolute;inset:0;pointer-events:none;z-index:2}
+.forest-transition__dark{background:#090a08;opacity:var(--dark)}
+.forest-transition__mist{background:linear-gradient(110deg,transparent,#e8dfcb75 48%,transparent 80%);opacity:var(--mist)}
+.forest-transition__copy{position:relative;z-index:3;width:min(640px,70%);padding:80px 20px;text-align:center;opacity:var(--copy-opacity);transform:translate3d(0,var(--copy-y),0)}
+.forest-transition__copy:before{content:'';position:absolute;inset:4% -12%;z-index:-1;background:radial-gradient(ellipse,#e8dcc1a6,transparent 72%);pointer-events:none}
+.forest-transition__label{font:10px/1.8 Arial,sans-serif;letter-spacing:.2em}
+.forest-transition__copy h2{font-family:'Hahmlet','Batang',serif;font-size:clamp(27px,3.1vw,46px);line-height:1.5;letter-spacing:-.06em;font-weight:650;margin:23px 0 32px}
+.forest-transition__copy>p:not(.forest-transition__label){font:15px/1.95 'Malgun Gothic',sans-serif;word-break:keep-all;margin:17px 0}
+.forest-transition__copy blockquote{font:500 clamp(19px,2vw,26px)/1.7 'Hahmlet',serif;color:#a83a35;margin:34px 0 15px;word-break:keep-all}
+.forest-transition__copy .forest-transition__note{font-size:11px!important;color:#5d5146}
+@media(max-width:650px){.forest-transition__stage{min-height:max(730px,100svh)}.forest-transition.is-enhanced{height:170svh;min-height:1240px}.forest-transition__tree{width:120%;max-width:none;object-fit:cover}.forest-transition__tree--left{left:-10%;object-position:20% center}.forest-transition__tree--right{left:-10%;object-position:80% center}.forest-transition__copy{width:84%;padding:65px 8px}.forest-transition__copy>p:not(.forest-transition__label){font-size:14px}.forest-transition__copy blockquote{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.forest-transition.is-enhanced{height:auto;min-height:0}.forest-transition.is-enhanced .forest-transition__stage{position:relative}.forest-transition__background{transform:none}.forest-transition__tree{will-change:auto}}
