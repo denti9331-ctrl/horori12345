@@ -1,0 +1,12 @@
+@font-face{font-family:'Entry Hahmlet';src:url('./redridinghood/fonts/Hahmlet-Variable.ttf') format('truetype');font-weight:100 900;font-display:swap}
+.tale-departure{position:fixed;inset:0;z-index:1000;isolation:isolate;background:transparent;animation:entry-dim 700ms ease forwards}
+.tale-departure p{position:absolute;inset:0;display:grid;place-content:center;margin:0;padding:24px;text-align:center;white-space:pre-line;font:400 clamp(20px,2.3vw,32px)/1.9 'Entry Hahmlet','Batang',serif;letter-spacing:-.025em;color:#e5e7e3;z-index:2;opacity:0;animation:entry-quote 2300ms ease both}
+/* Uneven lobes drift inward from both edges; the final tone matches arrival. */
+.tale-departure::before,.tale-departure::after{content:'';position:absolute;inset:-15%;pointer-events:none;filter:blur(30px);opacity:0;background:radial-gradient(ellipse at 5% 18%,#929992 0%,#929992cc 27%,transparent 62%),radial-gradient(ellipse at 90% 80%,#929992 0%,#929992bb 30%,transparent 68%),radial-gradient(ellipse at 20% 95%,#929992cc,transparent 62%);animation:entry-fog 1000ms 1400ms ease-in forwards}
+.tale-departure::after{background:radial-gradient(ellipse at 94% 15%,#929992,transparent 65%),radial-gradient(ellipse at 8% 70%,#929992,transparent 65%);animation-name:entry-fog-reverse}
+.library-page.tale-departing .open-book .tale-red .card-image-frame::before{border-color:#e0e5dd;box-shadow:0 0 14px #d8e1d680;transition:box-shadow 300ms,border-color 300ms}
+@keyframes entry-dim{to{background:#080c0bc7}}
+@keyframes entry-quote{0%,8%{opacity:0}25%,70%{opacity:1}88%,100%{opacity:0}}
+@keyframes entry-fog{0%{opacity:0;transform:translateX(-12%)}70%{opacity:.8}100%{opacity:1;transform:none;background-color:#929992}}
+@keyframes entry-fog-reverse{0%{opacity:0;transform:translateX(12%)}100%{opacity:.65;transform:none}}
+@media(prefers-reduced-motion:reduce){.tale-departure{display:none}}

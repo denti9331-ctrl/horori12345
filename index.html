@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d14">
+  <meta name="description" content="Step into a collection of familiar fairy tales, told in shadow and wonder.">
+  <title>DARK FAIRY TALE — A Collection of Tales</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="archive-entry.css">
+  <script src="archive-entry.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="book-background.js" defer></script>
+  <script src="book-cta.js" defer></script>
+  <link rel="stylesheet" href="main-intro.css">
+  <script src="main-intro.js" defer></script>
+  <link rel="stylesheet" href="main-nav.css">
+  <script src="main-nav.js" defer></script>
+</head>
+<body class="library-page has-intro">
+  <nav class="main-navigation" aria-label="Main navigation">
+    <a class="main-navigation__brand" href="#main-intro">DARK FAIRY TALE</a>
+    <div class="main-navigation__links">
+      <a href="#main-intro">HOME</a>
+      <a href="#book-scene">ARCHIVE</a>
+      <button type="button" data-about aria-haspopup="dialog" aria-controls="main-about">ABOUT</button>
+    </div>
+  </nav>
+  <section id="main-intro" class="main-intro" aria-labelledby="main-intro-title">
+    <video class="main-intro__video" data-petals-intro autoplay muted playsinline preload="auto" aria-hidden="true" tabindex="-1"><source src="assets/petals-loop.webm" type="video/webm"></video>
+    <video class="main-intro__video main-intro__video--loop" data-petals-loop autoplay muted playsinline loop preload="auto" aria-hidden="true" tabindex="-1"><source src="assets/petals-intro.webm" type="video/webm"></video>
+    <div class="main-intro__copy sr-only">
+      <p class="main-intro__eyebrow">BEYOND ONCE UPON A TIME</p>
+      <h1 id="main-intro-title"><span>DARK</span><span>FAIRY TALE</span></h1>
+      <p class="main-intro__description">우리가 알던 동화, 그 너머의 이야기</p>
+    </div>
+    <a class="main-intro__scroll" href="#book-scene">SCROLL TO THE BOOK</a>
+  </section>
+  <div class="book-scene" id="book-scene">
+  <div class="intro-background" aria-hidden="true"><video class="book-background-video" src="assets/bg.webm" autoplay muted loop playsinline preload="metadata" tabindex="-1"></video></div>
+  <div class="intro-overlay" aria-hidden="true"></div>
+  <div class="intro-ui">
+
+    <button class="intro-cta" type="button" data-open-archive aria-label="Open the book"><span class="intro-cta__reveal">
+      <span class="intro-decoration" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 40 35 10M15 33C10 17 23 5 40 7 41 23 31 35 15 33ZM21 27 21 16M27 21 37 21"/></svg></span>
+      <span class="intro-rule" aria-hidden="true">◆</span>
+      <span class="intro-title">OPEN<br>THE BOOK</span>
+      <span class="intro-rule" aria-hidden="true">◆</span>
+    </span></button>
+  </div>
+  <dialog id="main-about" class="intro-about" aria-labelledby="about-title"><h2 id="about-title">ONCE UPON A TIME</h2><p>An archive of familiar fairy tales, told in shadow and wonder.</p><form method="dialog"><button>CLOSE</button></form></dialog>
+  <a class="skip-link" href="#tales">Skip to the tales</a>
+  <main class="library">
+    <section class="closed-book-stage" aria-label="Open the fairy-tale archive" hidden>
+      <button class="book-trigger" type="button" aria-controls="book-interior" aria-expanded="false">
+        <span class="cover-float"><span class="cover-tilt"><span class="book">
+          <span class="back-cover" aria-hidden="true"></span>
+          <span class="page-stack" aria-hidden="true"></span>
+          <span class="left-page-stack" aria-hidden="true"></span>
+          <span class="paper-contact-shadow" aria-hidden="true"></span>
+          <span class="page page-1 page-turn" aria-hidden="true"></span>
+          <span class="page page-2 page-turn" aria-hidden="true"></span>
+          <span class="page page-3 page-turn" aria-hidden="true"></span>
+          <span class="page page-4 page-turn" aria-hidden="true"></span>
+          <span class="page page-5 page-turn" aria-hidden="true"></span>
+          <span class="page page-6 page-turn" aria-hidden="true"></span>
+          <span class="page page-7 page-turn" aria-hidden="true"></span>
+          <span class="page page-8 page-turn" aria-hidden="true"></span>
+          <span class="page page-9 page-turn" aria-hidden="true"></span>
+          <span class="page page-10 page-turn" aria-hidden="true"></span>
+          <span class="page page-11 page-turn" aria-hidden="true"></span>
+          <span class="page page-12 page-turn" aria-hidden="true"></span>
+          <span class="front-cover">
+            <img class="book-cover" src="./assets/book-cover.png" alt="Antique fairy-tale book cover">
+            <span class="cover-fallback" hidden>ONCE UPON A TIME</span>
+          </span>
+        </span></span></span>
+        <span class="open-label">OPEN THE BOOK</span>
+        <span class="open-divider" aria-hidden="true"></span>
+      </button>
+    </section>
+    <div class="open-book" id="book-interior">
+      <span class="book-frame" aria-hidden="true"><span class="book-spine"></span></span>
+      <img class="book-background" src="./assets/book-bg.jpg" alt="" aria-hidden="true" fetchpriority="high">
+    <header class="library-heading">
+      <div class="ornament" aria-hidden="true">✦</div>
+      <p class="eyebrow">A COLLECTION OF FAIRY TALES</p>
+      <h1>ONCE UPON A TIME</h1>
+      <p class="subtitle">Choose the story you remember.</p>
+    </header>
+    <section class="tales" id="tales" aria-label="Choose a fairy tale from the open book">
+      <a class="tale-card tale-red" href="./redridinghood/index.html" aria-label="Read Little Red Riding Hood">
+        <h2 class="album-title">LITTLE RED RIDING HOOD</h2>
+        <span class="card-image-frame"><img class="card-art" src="./assets/card-redhood.png" alt="Little Red Riding Hood story artwork" fetchpriority="high"></span>
+        <p class="album-description">A girl, a wolf, and a path into the woods.</p>
+        <span class="album-status">READ THE TALE →</span>
+      </a>
+      <article class="tale-card tale-cinderella" aria-label="Cinderella, coming soon">
+        <h2 class="album-title">CINDERELLA</h2>
+        <span class="card-image-frame"><img class="card-art" src="./assets/card-cinderella.png" alt="Cinderella story artwork"></span>
+        <p class="album-description">A wish, a midnight bell, and a glass slipper.</p>
+        <span class="album-status">COMING SOON</span>
+      </article>
+      <article class="tale-card tale-snow" aria-label="Snow White, coming soon">
+        <h2 class="album-title">SNOW WHITE</h2>
+        <span class="card-image-frame"><img class="card-art" src="./assets/card-snowwhite.png" alt="Snow White story artwork"></span>
+        <p class="album-description">A mirror, a poisoned apple, and a hidden envy.</p>
+        <span class="album-status">COMING SOON</span>
+      </article>
+      <article class="tale-card tale-mermaid" aria-label="The Little Mermaid, coming soon">
+        <h2 class="album-title">THE LITTLE MERMAID</h2>
+        <span class="card-image-frame"><img class="card-art" src="./assets/card-mermaid.png" alt="The Little Mermaid story artwork"></span>
+        <p class="album-description">A voice traded for a world beyond the sea.</p>
+        <span class="album-status">COMING SOON</span>
+      </article>
+    </section>
+    <footer class="library-footer"><span class="album-page">01</span><p>SELECT A TALE</p><span class="album-page">02</span></footer>
+    </div>
+  </main>
+  </div>
+</body>
+</html>
+
+

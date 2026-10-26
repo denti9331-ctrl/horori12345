@@ -1,0 +1,20 @@
+/* Body-level fixed navigation, independent of all book transforms and exit states. */
+.library-page{--main-nav-height:64px;padding-top:0}
+.main-navigation{position:fixed;inset:0 0 auto;z-index:100;height:var(--main-nav-height);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(16px,4vw,64px);background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid #e2e5df;color:#e2e5df;font-family:'Archive Cinzel Decorative',Georgia,serif}
+.main-navigation a,.main-navigation button{font:400 12px/1.5 'Archive Cinzel Decorative',Georgia,serif;letter-spacing:.05em;color:inherit;text-decoration:none;background:none;border:0;padding:9px 0;cursor:pointer;white-space:nowrap}
+.main-navigation .main-navigation__brand{font-size:15px;letter-spacing:.07em}
+.main-navigation__links{display:flex;align-items:center;gap:clamp(18px,3vw,42px)}
+.main-navigation a:hover,.main-navigation button:hover{text-decoration:underline;text-underline-offset:6px;color:#fff}
+.main-navigation :focus-visible{outline:1px solid #c6cec1;outline-offset:5px;text-decoration:underline;text-underline-offset:6px}
+#main-intro,#book-scene{scroll-margin-top:var(--main-nav-height)}
+/* Let the intro artwork extend behind the transparent navigation. */
+.library-page .main-intro{height:100vh;height:100svh}
+@media(max-width:600px){
+ .library-page{--main-nav-height:54px}
+ .main-navigation{padding:0 12px;gap:10px}
+ .main-navigation .main-navigation__brand{font-size:11px;letter-spacing:.015em}
+ .main-navigation__links{gap:14px}
+ .main-navigation a,.main-navigation button{font-size:10px;letter-spacing:0}
+}
+@media(max-width:350px){.main-navigation__links{gap:9px}.main-navigation .main-navigation__brand{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.main-navigation *{transition:none}}
